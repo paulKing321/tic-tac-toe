@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game">
+        <div class="intro-screen" id="introScreen">
+            <h1>Welcome to Tic Tac Toe</h1>
+            <img class="img" src="https://drive.google.com/uc?export=view&id=1omhXipoJu8iWbnnqjdZm_FP2QiEc1-Bh" alt="Tic Tac Toe Image">
+            <p>Made with love by PaulKing</p>
+        </div>
+        <div class="screen" id="gameScreen" style="display: none;">
+            <h1>Tic Tac Toe</h1>
+            <div class="board">
+                <div class="cell" onclick="cellClicked(0)"></div>
+                <div class="cell" onclick="cellClicked(1)"></div>
+                <div class="cell" onclick="cellClicked(2)"></div>
+                <div class="cell" onclick="cellClicked(3)"></div>
+                <div class="cell" onclick="cellClicked(4)"></div>
+                <div class="cell" onclick="cellClicked(5)"></div>
+                <div class="cell" onclick="cellClicked(6)"></div>
+                <div class="cell" onclick="cellClicked(7)"></div>
+                <div class="cell" onclick="cellClicked(8)"></div>
+            </div>
+            <div id="playerTurn" class="player-turn">Player X's turn</div>
+        </div>
+        <div class="modal" id="winModal">
+            <div class="modal-content">
+                <h1>Player <span id="winner"></span> wins!</h1>
+                <button onclick="resetGame()">New Game</button>
+            </div>
+        </div>
+        <div class="modal" id="drawModal">
+            <div class="modal-content">
+                <h1>It's a draw!</h1>
+                <button onclick="resetGame()">New Game</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
